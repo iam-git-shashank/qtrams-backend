@@ -35,6 +35,21 @@ const form = async (req, res) => {
   res.json({ hii: "fdfd" });
 };
 
+
+
+const msg=(req,res)=>{
+  console.log(req.query)
+  res.json({"hi":"name"})
+}
+
+
+
+
+
+
 module.exports = {
   form,
+  msg
 };
+
+
