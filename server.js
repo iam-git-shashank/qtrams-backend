@@ -7,7 +7,8 @@ const controller=require("./controller")
 app.use(express.json())
 app.use(cors())
 
-app.get("/submit",controller.form)
+app.post("/submit",controller.form)
+app.get("/msg",controller.msg)
 
 
 server.listen(8001,()=>{console.log('server started')})
