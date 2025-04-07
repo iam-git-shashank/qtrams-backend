@@ -5,7 +5,12 @@ const cors=require("cors")
 const server=http.createServer(app)
 const controller=require("./controller")
 app.use(express.json())
-app.use(cors())
+app.use(
+  cors({
+    origin: "*",
+  })
+);
+
 
 app.post("/submit",controller.form)
 app.get("/msg",controller.msg)
